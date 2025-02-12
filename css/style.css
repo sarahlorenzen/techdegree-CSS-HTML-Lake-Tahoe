@@ -46,7 +46,8 @@ img {
 header {
   padding: 10vh 1rem;
   margin: -1rem -1rem 1rem;
-  background-color: #f3753b;
+  background: url(../img/mountains.jpg) center / cover no-repeat #f3753b;
+  background-blend-mode: multiply;
   color: white;
 }
 header,
@@ -58,7 +59,13 @@ footer {
   letter-spacing: 1px;
 }
 main {
+  max-width: 1000px;
+  margin: 0 auto;
   hyphens: auto;
+}
+section {
+  padding: 4rem 0;
+  border-bottom: 1px dashed #9599a9;
 }
 #wildlife {
   padding: 20% 15%;
@@ -78,10 +85,45 @@ main {
   border-radius: 20px/10px;
   margin: 1rem auto;
   box-shadow: 1px 2px 3px rgba(0, 10, 30, 0.5);
-  background-color: #cc4e13;
+  background-image: linear-gradient(
+      135deg,
+      rgba(255, 255, 224, 0.8) 0%,
+      rgba(250, 100, 50, 0.2) 50%
+    ),
+    linear-gradient(#b40 0%, #d63 50%, #c51 51%, #e74 100%);
   color: white;
   text-align: center;
   font-size: 1.25rem;
 }
+.column:first-child {
+  margin-bottom: 4rem;
+}
 
 /* Media Queries ------------------- */
+@media screen and (min-width: 720px) {
+  header {
+    padding: 20vh 1rem;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  h1::after {
+    margin-top: 1rem;
+  }
+  .title {
+    font-size: 1.25rem;
+  }
+  .intro {
+    padding: 0 15%;
+    font-size: 1.1rem;
+  }
+  .column {
+    display: inline-block;
+    width: 48%;
+    margin-right: -4px;
+  }
+  .column:first-child {
+    margin-right: calc(4% + -4px);
+    margin-bottom: 0;
+  }
+}
