@@ -1,5 +1,8 @@
 /* Web Fonts ----------------------- */
-
+@font-face {
+  font-family: "Abolition Regular";
+  src: url("../fonts/abolition-regular-webfont.woff") format("woff");
+}
 
 /* Base Styles --------------------- */
 * {
@@ -8,13 +11,77 @@
 html {
   font-size: 1.25em; /* 20px on most screens */
 }
+body {
+  margin: 1rem;
+  color: #454959;
+  font: 300 100%/1.5 "Work Sans", sans-serif;
+}
+a {
+  color: #cc4e13;
+  text-decoration: none;
+}
+h1,
+h2 {
+  font: 400 4rem/1.1 "Abolition Regular", Impact, Charcoal, sans-serif;
+}
+h1 {
+  text-shadow: 1px 2px 3px rgba(0, 10, 30, 0.5);
+}
+h1::after {
+  content: "\2193";
+  display: block;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
 img {
   width: 100%; /* responsive images */
+  border-radius: 10px;
 }
 
-
 /* Main Styles --------------------- */
+header {
+  padding: 10vh 1rem;
+  margin: -1rem -1rem 1rem;
+  background-color: #f3753b;
+  color: white;
+}
+header,
+footer {
+  text-align: center;
+}
 
+.title {
+  letter-spacing: 1px;
+}
+main {
+  hyphens: auto;
+}
+#wildlife {
+  padding: 20% 15%;
+  border-top: 12px solid #f3753b;
+  border-radius: 12px 12px 0 0;
+  background: url(../img/bear.jpg) center / cover #454959;
+  color: white;
+  box-shadow: inset 0 0 20px 10px rgba(0, 10, 30, 0.8);
+}
+#wildlife a {
+  color: #f7a27c;
+}
+.callout {
+  display: block;
+  width: 250px;
+  padding: 0.25rem 1rem;
+  border-radius: 20px/10px;
+  margin: 1rem auto;
+  box-shadow: 1px 2px 3px rgba(0, 10, 30, 0.5);
+  background-color: #cc4e13;
+  color: white;
+  text-align: center;
+  font-size: 1.25rem;
+}
 
 /* Media Queries ------------------- */
-
